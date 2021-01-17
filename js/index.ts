@@ -1,10 +1,12 @@
 import MediaPlayer from "./MediaPlayer"
 import Autoplay from "./plugins/Autoplay"
 import Autopause from "./plugins/Autopause"
+import AdsPlugin from "./plugins/Ads/index"
+
 const video = document.querySelector("video")
 const player = new MediaPlayer({
     el: video,
-    plugins: [new Autoplay(), new Autopause()],
+    plugins: [new Autoplay(), new Autopause(), new AdsPlugin()],
 })
 
 const togglePlay: HTMLButtonElement = document.querySelector("#togglePlay")

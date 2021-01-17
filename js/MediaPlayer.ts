@@ -1,17 +1,24 @@
 import MediaPlayerPlugin from "./plugins/MediaPlayerPlugin"
 
 class MediaPlayer {
-    private media: HTMLMediaElement
+    public media: HTMLMediaElement
     private plugins: MediaPlayerPlugin[]
+    public container: HTMLElement
     constructor(config: any) {
         this.media = config.el
         this.plugins = config.plugins || []
+        this._initPlayer()
         this._initPlugins()
     }
     _initPlugins() {
         this.plugins.forEach((plugins: MediaPlayerPlugin) => {
             plugins.run(this)
         })
+    }
+    _initPlayer() {
+        this.container = document.createElement("div")
+        this.media.parentNode.insertBefore(this.container, this.media)
+        this.container.appendChild(this.media)
     }
     play(): void {
         this.media.play()
