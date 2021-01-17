@@ -41,4 +41,16 @@ function add(a:number,b:number):number {
     return a + b
 }
 
-const sum = add(12,10)
+const sum = add(12, 10)
+
+// Interfaces
+interface Rectangule {
+    width: number
+    heigh: number
+    color?: Color
+}
+
+let rect: Rectangule = {
+    width: 4,
+    heigh:5
+}
