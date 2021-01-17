@@ -4,7 +4,7 @@
     "description": "A media player plugin for the web",
     "main": "index.js",
     "scripts": {
-        "start": "parcel index.html ejercicios/index.html ejercicios/**/*html",
+        "start": "parcel index.html exercises/index.html exercises/**/*.html",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
@@ -18,7 +18,8 @@
     "author": "Javier Chávez",
     "license": "ISC",
     "devDependencies": {
-        "parcel-bundler": "^1.12.4"
+        "parcel-bundler": "^1.12.4",
+        "typescript": "^4.1.3"
     },
     "browserslist": [
         "defaults",
