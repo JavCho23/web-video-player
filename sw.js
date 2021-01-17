@@ -16,14 +16,14 @@ self.addEventListener("fetch", (event) => {
 async function precache() {
     const cache = await caches.open(VERSION)
     return cache.addAll([
-        "/",
-        "/index.html",
-        "/assets/index.css",
-        "/assets/InYourEyes.mp4",
-        "/js/index.js",
-        "/js/MediaPlayer.js",
-        "/js/plugins/Autopause.js",
-        "/js/plugins/Autoplay.js",
+        // "/",
+        // "/index.html",
+        // "/assets/index.css",
+        // "/assets/InYourEyes.mp4",
+        // "/js/index.js",
+        // "/js/MediaPlayer.js",
+        // "/js/plugins/Autopause.js",
+        // "/js/plugins/Autoplay.js",
     ])
 }
 
