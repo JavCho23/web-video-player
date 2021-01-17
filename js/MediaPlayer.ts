@@ -1,45 +1,41 @@
+import MediaPlayerPlugin from "./plugins/MediaPlayerPlugin"
+
 class MediaPlayer {
-    constructor(config) {
+    private media: HTMLMediaElement
+    private plugins: MediaPlayerPlugin[]
+    constructor(config: any) {
         this.media = config.el
         this.plugins = config.plugins || []
         this._initPlugins()
     }
     _initPlugins() {
-        const player = {
-            play: () => this.play(),
-            pause: () => this.pause(),
-            media: this.media,
-            get isMuted() {
-                return this.media.muted
-            },
-            set muted(value) {
-                this.media.muted = value
-            },
-        }
-        this.plugins.forEach((plugins) => {
-            plugins.run(player)
+        this.plugins.forEach((plugins: MediaPlayerPlugin) => {
+            plugins.run(this)
         })
     }
-    play() {
+    play(): void {
         this.media.play()
     }
-    pause() {
+    pause(): void {
         this.media.pause()
     }
-    togglePlay() {
+    togglePlay(): void {
         if (this.media.paused) {
             this.play()
         } else {
             this.pause()
         }
     }
-    mute() {
+    get muted(): boolean {
+        return this.media.muted
+    }
+    mute(): void {
         this.media.muted = true
     }
-    unmute() {
+    unmute(): void {
         this.media.muted = false
     }
-    toggleMute() {
+    toggleMute(): void {
         if (this.media.muted) {
             this.unmute()
         } else {

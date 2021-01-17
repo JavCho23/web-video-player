@@ -1,6 +1,7 @@
 import MediaPlayer from "../MediaPlayer"
+import MediaPlayerPlugin from "./MediaPlayerPlugin"
 
-class Autopause {
+class Autopause implements MediaPlayerPlugin {
     private threshold: number
     private player: MediaPlayer
 
@@ -21,16 +22,16 @@ class Autopause {
             this.handleVisibilityChange.bind(this)
         )
     }
-    private handleIntersection(entries: IntersectionObserverEntry[]) {
+    private handleIntersection(entries: IntersectionObserverEntry[]): void {
         const entry = entries[0]
         const isVisible = entry.intersectionRatio >= this.threshold
         this.pauseOrPlay(isVisible)
     }
-    private handleVisibilityChange() {
+    private handleVisibilityChange(): void {
         const isVisible = document.visibilityState == "visible"
         this.pauseOrPlay(isVisible)
     }
-    private pauseOrPlay(isVisible) {
+    private pauseOrPlay(isVisible: boolean): void {
         if (isVisible) this.player.play()
         else this.player.pause()
     }
