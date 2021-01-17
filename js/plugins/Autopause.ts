@@ -8,7 +8,7 @@ class Autopause implements MediaPlayerPlugin {
     constructor() {
         this.threshold = 0.25
     }
-    run(player) {
+    run(player: MediaPlayer) {
         this.player = player
         const observer = new IntersectionObserver(
             this.handleIntersection.bind(this),

@@ -33,7 +33,7 @@ class MediaPlayer {
             this.pause()
         }
     }
-    get muted(): boolean {
+    muted(): boolean {
         return this.media.muted
     }
     mute(): void {
