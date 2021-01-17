@@ -5,7 +5,6 @@
     "removeComments": true,
     "preserveConstEnums": true,
     "outDir": "./dist",
-    "sourceMap": true
   },
   "exclude": ["node_modules", "**/*.spec.ts"]
 }
