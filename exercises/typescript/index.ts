@@ -1,8 +1,6 @@
 console.log('Hello, TypeScript');
 
-function add(a:number,b:number):number {
-    return a + b
-}
+
 
 let numerador:number = 42
 let denominador:number = 6
@@ -35,3 +33,12 @@ comodin = { type: 'Wildcard' }
 // Object
 
 let someObject: Object = {}
+
+
+// Functions
+
+function add(a:number,b:number):number {
+    return a + b
+}
+
+const sum = add(12,10)
