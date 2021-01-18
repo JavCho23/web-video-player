@@ -15,7 +15,6 @@ class MediaPlayer {
     constructor(config: any) {
         this.media = config.el
         this.plugins = config.plugins || []
-        console.log("Alo")
         this._buildPlayer()
         this._initPlugins()
     }
