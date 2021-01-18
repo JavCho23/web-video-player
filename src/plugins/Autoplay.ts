@@ -1,5 +1,5 @@
-import MediaPlayer from "./../MediaPlayer"
-import MediaPlayerPlugin from "./MediaPlayerPlugin"
+import MediaPlayer from "./../MediaPlayer.js"
+import MediaPlayerPlugin from "./MediaPlayerPlugin.js"
 
 class Autoplay implements MediaPlayerPlugin {
     run(player: MediaPlayer) {

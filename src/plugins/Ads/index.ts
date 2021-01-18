@@ -1,6 +1,6 @@
-import MediaPlayer from "../../MediaPlayer"
-import MediaPlayerPlugin from "./../MediaPlayerPlugin"
-import Ads, { Ad } from "./Ads"
+import MediaPlayer from "../../MediaPlayer.js"
+import MediaPlayerPlugin from "./../MediaPlayerPlugin.js"
+import Ads, { Ad } from "./Ads.js"
 class AdsPlugin implements MediaPlayerPlugin {
     private player: MediaPlayer
     private media: HTMLMediaElement

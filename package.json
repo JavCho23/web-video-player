@@ -4,9 +4,9 @@
     "description": "A media player plugin for the web",
     "main": "index.js",
     "scripts": {
-        "start": "parcel index.html exercises/index.html exercises/**/*.html",
+        "start": "tsc -w",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "cleanup": "rm -rf .cache dist"
+        "clean": "rm -rf .cache dist"
     },
     "keywords": [
         "js",
