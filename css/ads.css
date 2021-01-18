@@ -3,9 +3,9 @@
     padding-right: 8px;
     background: white;
     width: 80%;
-
-    position: absolute;
-    bottom: 20px;
+    height: 6em;
+    position: relative;
+    bottom: 10em;
     left: 50%;
     transform: translateX(-50%);
 }

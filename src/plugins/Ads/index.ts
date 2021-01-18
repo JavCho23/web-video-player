@@ -17,8 +17,7 @@ class AdsPlugin implements MediaPlayerPlugin {
         this.media.addEventListener(
             "timeupdate",
             this.handlerTimeUpdate.bind(this)
-      )
-      console.log(this.player);
+        )
         this.player.container.appendChild(this.adsContainer)
     }
     private handlerTimeUpdate() {

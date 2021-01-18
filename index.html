@@ -22,19 +22,9 @@
         </header>
 
         <main class="container">
-            <div class="movie">
-                <video class="movie__video">
-                    <source src="./assets/InYourEyes.mp4" />
-                </video>
-                <div class="movie__actions">
-                    <button class="movie__button" id="togglePlay" class="btn">
-                        <i class="fa fa-play-circle"></i>
-                    </button>
-                    <button class="movie__button" id="toggleMute" class="btn">
-                        <i class="fa fa-volume-up"></i>
-                    </button>
-                </div>
-            </div>
+            <video id="video">
+                <source src="./assets/InYourEyes.mp4" />
+            </video>
         </main>
         <h2>Coments</h2>
         <ul>
@@ -162,6 +152,6 @@
             </li>
         </ul>
 
-        <script type="module" src="./dist/src/index.js"></script>
+        <script type="module" src="./dist/index.js"></script>
     </body>
 </html>
