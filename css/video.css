@@ -1,0 +1,31 @@
+.movie {
+    display: flex;
+    flex-direction: column;
+}
+.movie__video {
+    width: 100%;
+}
+.movie__actions {
+    position: relative;
+    height: 3em;
+    bottom: 3em;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    display: flex;
+    opacity: 0;
+    transition: 450ms opacity;
+    justify-content: space-between;
+}
+.movie:hover .movie__actions {
+    opacity: 1;
+}
+
+.movie__button {
+    background: none;
+    color: #2587a8;
+    font-size: 2em;
+    border: none;
+}
